@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=DM+Sans:wght@400;600;700&display=swap');
+
+/*
+  ThemeBuilder export: tema-880
+  Google Fonts: Archivo för rubriker, DM Sans för brödtext.
+  Färgharmoni: complementary, spridning 89%.
+  Färgvärden exporteras som hex.
+  Lägg data-theme="dark" eller data-theme="light" på html/body för att låsa läge.
+  Utan data-theme följer temat användarens systeminställning.
+*/
+
+:root {
+  --color-scheme: light;
+  --bg: #f6f9f8;
+  --surface: #ffffff;
+  --surface-muted: #f4f6f6;
+  --text: #223a38;
+  --muted: #577f7c;
+  --border: #dce5e4;
+  --primary: #0f766e;
+  --primary-hover: #0b5650;
+  --primary-contrast: #ffffff;
+  --accent: #db2777;
+  --accent-contrast: #ffffff;
+  --secondary: #760f39;
+  --tertiary: #76350f;
+  --success: #15803d;
+  --warning: #a16207;
+  --danger: #be123c;
+  --shadow: 0 18px 48px rgba(15, 23, 42, 0.14);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --font-body: "DM Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-heading: "Archivo", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+[data-theme="dark"] {
+  --color-scheme: dark;
+  --bg: #1c2726;
+  --surface: #243836;
+  --surface-muted: #2f4644;
+  --text: #dee3e3;
+  --muted: #a9bcbb;
+  --border: #334c4a;
+  --primary: #18beb1;
+  --primary-hover: #1cdecf;
+  --primary-contrast: #101827;
+  --accent: #e14a8d;
+  --accent-contrast: #101827;
+  --secondary: #e74185;
+  --tertiary: #d9611c;
+  --success: #4ade80;
+  --warning: #facc15;
+  --danger: #fb7185;
+  --shadow: 0 18px 52px rgba(0, 0, 0, 0.36);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --font-body: "DM Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-heading: "Archivo", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+[data-theme="light"] {
+  --color-scheme: light;
+  --bg: #f6f9f8;
+  --surface: #ffffff;
+  --surface-muted: #f4f6f6;
+  --text: #223a38;
+  --muted: #577f7c;
+  --border: #dce5e4;
+  --primary: #0f766e;
+  --primary-hover: #0b5650;
+  --primary-contrast: #ffffff;
+  --accent: #db2777;
+  --accent-contrast: #ffffff;
+  --secondary: #760f39;
+  --tertiary: #76350f;
+  --success: #15803d;
+  --warning: #a16207;
+  --danger: #be123c;
+  --shadow: 0 18px 48px rgba(15, 23, 42, 0.14);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --font-body: "DM Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-heading: "Archivo", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-scheme: dark;
+    --bg: #1c2726;
+    --surface: #243836;
+    --surface-muted: #2f4644;
+    --text: #dee3e3;
+    --muted: #a9bcbb;
+    --border: #334c4a;
+    --primary: #18beb1;
+    --primary-hover: #1cdecf;
+    --primary-contrast: #101827;
+    --accent: #e14a8d;
+    --accent-contrast: #101827;
+    --secondary: #e74185;
+    --tertiary: #d9611c;
+    --success: #4ade80;
+    --warning: #facc15;
+    --danger: #fb7185;
+    --shadow: 0 18px 52px rgba(0, 0, 0, 0.36);
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --font-body: "DM Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-heading: "Archivo", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+}
+
+html,
+body {
+  color-scheme: var(--color-scheme);
+}
+
+body {
+  color: var(--text);
+  background: var(--bg);
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text);
+  font-family: var(--font-heading);
+}
+
+a {
+  color: var(--primary);
+}
+
+
+.theme-button,
+button.theme-button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 0 1rem;
+  color: var(--primary-contrast);
+  background: var(--primary);
+  box-shadow: var(--shadow);
+  font: 700 1rem/1 var(--font-body);
+}
+
+.theme-button:hover {
+  background: var(--primary-hover);
+}
+
+.theme-button.secondary {
+  color: var(--text);
+  background: var(--surface);
+  border-color: var(--border);
+  box-shadow: none;
+}
+
+.theme-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  color: var(--text);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.theme-field {
+  display: grid;
+  gap: 0.45rem;
+  color: var(--muted);
+  font: 700 0.875rem/1.3 var(--font-body);
+}
+
+.theme-field input,
+.theme-field select,
+.theme-field textarea {
+  min-height: 44px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.65rem 0.8rem;
+  color: var(--text);
+  background: var(--surface);
+  font: 400 1rem/1.4 var(--font-body);
+}
+
+.theme-field input:focus,
+.theme-field select:focus,
+.theme-field textarea:focus {
+  outline: 3px solid color-mix(in srgb, var(--primary), transparent 76%);
+  border-color: var(--primary);
+}

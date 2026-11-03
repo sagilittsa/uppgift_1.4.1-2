@@ -1,0 +1,78 @@
+/* Själva knappen */
+.lage-val {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.lage-val input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.lage-val label {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 40px;
+  border-radius: 999px;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.lage-val svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.lage-val input:checked + label {
+  background: var(--primary);
+  color: var(--primary-contrast);
+}
+
+.lage-val input:focus-visible + label {
+  outline: 3px solid var(--accent);
+}
+
+/* Ljust läge valt */
+:root:has(#lage-light:checked) {
+  --color-scheme: light;
+  --bg: #f6f9f8;
+  --surface: #ffffff;
+  --surface-muted: #f4f6f6;
+  --text: #223a38;
+  --muted: #577f7c;
+  --border: #dce5e4;
+  --primary: #0f766e;
+  --primary-hover: #0b5650;
+  --primary-contrast: #ffffff;
+  --accent: #db2777;
+  --accent-contrast: #ffffff;
+  --shadow: 0 18px 48px rgba(15, 23, 42, 0.14);
+}
+
+/* Mörkt läge valt */
+:root:has(#lage-dark:checked) {
+  --color-scheme: dark;
+  --bg: #1c2726;
+  --surface: #243836;
+  --surface-muted: #2f4644;
+  --text: #dee3e3;
+  --muted: #a9bcbb;
+  --border: #334c4a;
+  --primary: #18beb1;
+  --primary-hover: #1cdecf;
+  --primary-contrast: #101827;
+  --accent: #e14a8d;
+  --accent-contrast: #101827;
+  --shadow: 0 18px 52px rgba(0, 0, 0, 0.36);
+}

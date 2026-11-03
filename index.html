@@ -1,16 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./tema-880.css">
+    <link rel="stylesheet" href="./style.css">
+    <script>
+    </script>
 </head>
 <body>
     <header>
         <h1>Webbsida</h1>
+        
+        <div class="lage-val" role="radiogroup" aria-label="Färgläge">
+            <input type="radio" name="lage" id="lage-system" checked>
+            <label for="lage-system" title="System">
+                <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </label>
 
+            <input type="radio" name="lage" id="lage-light">
+            <label for="lage-light" title="Ljust">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            </label>
+
+            <input type="radio" name="lage" id="lage-dark">
+            <label for="lage-dark" title="Mörkt">
+                <svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            </label>
+        </div>
     </header>
 
     <nav>
@@ -18,6 +36,7 @@
         <a href="index_2.html">Två</a>
         <a href="index_3.html">Tre</a>
     </nav>
-    
+
+    <script src="./script.js"></script>
 </body>
 </html>
